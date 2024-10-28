@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Mahasiswa Ganteng UTB</title>
+  <style>
+    /* Gaya dasar untuk body dengan background gambar */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: linear-gradient(rgba(0, 150, 136, 0.8), rgba(0, 150, 136, 0.8)), url('/path/to/your/image.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #ffffff;
+    }
+
+    /* Gaya untuk navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 150, 136, 0.9);
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Gaya tombol di navbar */
+    .navbar a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 10px;
+      border-radius: 20px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    /* Efek hover untuk tombol */
+    .navbar a:hover {
+      background-color: #00897b;
+      transform: scale(1.1);
+    }
+
+    /* Container untuk tabel */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      margin: 100px auto 20px;
+      width: 80%;
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Gaya untuk judul di atas tabel */
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Gaya untuk pencarian */
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      max-width: 600px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .search-bar button:hover {
+      background-color: #00897b;
+    }
+
+    /* Gaya untuk tabel */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-in;
+    }
+
+    /* Animasi fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Gaya untuk header tabel */
+    th {
+      background-color: #00796b;
+      color: white;
+      padding: 15px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Gaya untuk data tabel */
+    td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      font-size: 15px;
+      color: #333;
+    }
+
+    /* Gaya untuk baris tabel */
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* Efek hover pada baris tabel */
+    tr:hover {
+      background-color: #e0f2f1;
+      transition: background-color 0.3s;
+    }
+
+    /* Gaya responsif */
+    @media screen and (max-width: 768px) {
+      table, .container {
+        width: 90%;
+      }
+
+      .navbar a {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar dengan tombol Beranda, Tentang, Alamat, dan Hubungi -->
+  <div class="navbar">
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#alamat">Alamat</a>
+    <a href="#hubungi">Hubungi</a>
+  </div>
+
+  <!-- Container untuk tabel daftar mahasiswa -->
+  <div class="container">
+    <!-- Judul di atas tabel -->
+    <h2>Daftar Mahasiswa Ganteng UTB</h2>
+
+    <!-- Form pencarian -->
+    <div class="search-bar">
+      <input type="text" placeholder="Cari Mahasiswa...">
+      <button type="button">Cari</button>
+    </div>
+
+    <!-- Tabel daftar mahasiswa -->
+    <table>
+      <thead>
+        <tr>
+          <th>NIM</th>
+          <th>Nama</th>
+          <th>Program Studi</th>
+          <th>Tahun Masuk</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>22552011178</td>
+          <td>Albi Saepul Marup</td>
+          <td>Teknik Informatika</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>2012101002</td>
+          <td>Lionel Messi</td>
+          <td>Sistem Informasi</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>2012101003</td>
+          <td>Prabowo</td>
+          <td>Teknik Industri</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>2012101004</td>
+          <td>Steven Asep</td>
+          <td>Manajemen</td>
+          <td>2022</td>
+        </tr>
+        <tr>
+          <td>202101005</td>
+          <td>Joko Susilo Yudhoyono</td>
+          <td>Akuntansi</td>
+          <td>2022</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
